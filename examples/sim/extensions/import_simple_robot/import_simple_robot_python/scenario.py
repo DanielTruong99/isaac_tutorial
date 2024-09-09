@@ -34,14 +34,15 @@ class SimpleRobotExampleScript:
         """
 
         robot_prim_path = "/simple_robot"
-        usd_path = os.path.join(os.path.dirname(__file__), "../../../../../usd")
-        path_to_robot_usd = usd_path + "/simple_robot.usd"
+        path_to_robot_usd = "omniverse://localhost/NVIDIA/Assets/Isaac/4.1/Isaac/Samples/Rigging/MockRobot/mock_robot_rigged.usd"
+        # path_to_robot_usd = os.path.join(os.path.dirname(__file__), "simple_robot.usd")
+        # path_to_robot_usd = usd_path + "/"
 
         add_reference_to_stage(path_to_robot_usd, robot_prim_path)
         self._robot = WheeledRobot(
                         prim_path=robot_prim_path,
                         name="simple_robot",
-                        wheel_dof_names=["wheel_left_joint", "wheel_right_joint"],
+                        wheel_dof_names=["wheel_joint_left", "wheel_joint_right"],
                         create_robot=True,
                         usd_path=path_to_robot_usd,
                         position=[0, 0.0, 0.5],
