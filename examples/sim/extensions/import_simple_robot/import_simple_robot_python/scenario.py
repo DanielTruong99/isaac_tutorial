@@ -34,7 +34,7 @@ class SimpleRobotExampleScript:
         """
 
         robot_prim_path = "/simple_robot"
-        path_to_robot_usd = "omniverse://localhost/NVIDIA/Assets/Isaac/4.1/Isaac/Samples/Rigging/MockRobot/mock_robot_rigged.usd"
+        path_to_robot_usd = "/home/ryz2/DanielWorkspace/Homework/isaac_tutorial/usd/issac_sim_tutorial_cart.usd"
         # path_to_robot_usd = os.path.join(os.path.dirname(__file__), "simple_robot.usd")
         # path_to_robot_usd = usd_path + "/"
 
@@ -42,7 +42,7 @@ class SimpleRobotExampleScript:
         self._robot = WheeledRobot(
                         prim_path=robot_prim_path,
                         name="simple_robot",
-                        wheel_dof_names=["wheel_joint_left", "wheel_joint_right"],
+                        wheel_dof_names=["wheel_left_joint", "wheel_right_joint"],
                         create_robot=True,
                         usd_path=path_to_robot_usd,
                         position=[0, 0.0, 0.5],
