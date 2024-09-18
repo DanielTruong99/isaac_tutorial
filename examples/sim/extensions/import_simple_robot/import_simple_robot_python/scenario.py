@@ -34,8 +34,9 @@ class SimpleRobotExampleScript:
         """
 
         robot_prim_path = "/simple_robot"
-        usd_path = os.path.join(os.path.dirname(__file__), "../../../../../usd")
-        path_to_robot_usd = usd_path + "/simple_robot.usd"
+        path_to_robot_usd = "/home/ryz2/DanielWorkspace/Homework/isaac_tutorial/usd/issac_sim_tutorial_cart.usd"
+        # path_to_robot_usd = os.path.join(os.path.dirname(__file__), "simple_robot.usd")
+        # path_to_robot_usd = usd_path + "/"
 
         add_reference_to_stage(path_to_robot_usd, robot_prim_path)
         self._robot = WheeledRobot(
